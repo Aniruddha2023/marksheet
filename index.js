@@ -3,11 +3,11 @@ const submitbtn = document.querySelector('#submit')
 submitbtn.addEventListener('click',(e)=>{
     
     e.preventDefault();
-    const english = parseIntp(document.querySelector('#english').value)
+    const english = parseInt(document.querySelector('#english').value)
     const bangla = parseInt(document.querySelector('#bangla').value)
     const math = parseInt(document.querySelector('#math').value)
     const social = parseInt(document.querySelector('#social').value)
-    const science = parseInt(document.querySelector('science').value)
+    const science = parseInt(document.querySelector('#science').value)
 
     const totalMarks = document.querySelector('.total-marks').textContent = english+bangla+math+social+science
 
@@ -16,7 +16,7 @@ submitbtn.addEventListener('click',(e)=>{
 
     const percentage = document.querySelector('.percentage').textContent = totalMarks / 5 +'%'
     document.querySelector('.marks-container').style.visibility ='hidden'
-    document.querySelector('.result-container').style.visibility =''
+    document.querySelector('.result-container').style.visibility ='visible'
 });
 
 function findGrade(marks){
